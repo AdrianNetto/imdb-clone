@@ -9,7 +9,9 @@ export default function Header() {
     <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
       <div className="flex gap-4">
         <MenuItem title="home" address="/" Icon={AiFillHome} />
+        <div className="ease-in-out duration-1000">
         <MenuItem title="about" address="/about" Icon={BsFillInfoCircleFill} />
+        </div>
       </div>
       <div className="flex items-center gap-4">
         <DarkModeSwitch />
