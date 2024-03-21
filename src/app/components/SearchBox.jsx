@@ -12,6 +12,7 @@ export default function SearchBox() {
     router.push(`/search/${search}`);
   };
   return (
+    <Suspense>
     <form
       className='flex justify-between px-5 max-w-6xl mx-auto'
       onSubmit={handleSubmit}
@@ -30,5 +31,6 @@ export default function SearchBox() {
         <IoSearch />
       </button>
     </form>
+    </Suspense>
   );
 }
