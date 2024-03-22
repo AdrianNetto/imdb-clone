@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { IoSearch } from "react-icons/io5";
 
 export default function SearchBox() {
@@ -12,7 +12,6 @@ export default function SearchBox() {
     router.push(`/search/${search}`);
   };
   return (
-    <Suspense>
     <form
       className='flex justify-between px-5 max-w-6xl mx-auto'
       onSubmit={handleSubmit}
@@ -31,6 +30,5 @@ export default function SearchBox() {
         <IoSearch />
       </button>
     </form>
-    </Suspense>
   );
 }
